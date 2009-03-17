@@ -115,12 +115,6 @@ class Admin::ArticlesController < Admin::BaseController
       @categories = @section.categories.roots
     end
 
-    def set_content_locale
-      ActiveRecord::Base.locale = params[:cl].blank? ? nil : params[:cl].to_sym
-      yield
-      ActiveRecord::Base.locale = nil
-    end
-    
     def params_author
       # FIXME - shouldn't we pass params[:article][:author_id] instead?
       author = User.find(params[:article][:author]) if params[:article][:author]

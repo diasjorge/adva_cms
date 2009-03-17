@@ -199,6 +199,8 @@ en:
         update:
           success: The section has been updated.
           failure: The section could not be updated.
+      locales:
+        translated: "This section has these translations: {{locales}}"
     blog:
       titles:
         date: "from {{date}}"

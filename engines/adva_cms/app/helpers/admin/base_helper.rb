@@ -83,6 +83,13 @@ module Admin::BaseHelper
     }.join(', ')
   end
 
+  def section_translation_links(section, view)
+    section.translated_locales.map { |tl|
+      link_to tl, edit_admin_section_url(section.site, section, :cl => tl)
+    }.join(', ')
+  end
+
+
   private
   def resource_class(resource)
     resource.class.to_s.tableize.singularize

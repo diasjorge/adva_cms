@@ -92,7 +92,25 @@ class AdminSectionsControllerTest < ActionController::TestCase
       end
     end
   end
-  
+
+  describe "GET to :edit for :de" do
+    action { get :edit, default_params.merge(:id => @section.id, :cl => 'de') }
+    it_guards_permissions :update, :article
+
+    with :access_granted do
+      it_assigns :site, :section
+      it_renders :template, :edit do
+        has_tag '#section_locale option[value="de"][selected="selected"]'
+        has_tag %{input[name="cl"][value="de"]}
+        has_form_putting_to admin_section_path do
+          has_tag 'input[name=?]', 'section[title]'
+          has_tag 'input[name=cl][value="de"]'
+        end
+      end
+    end
+  end
+
+
   describe "PUT to :update" do
     action do
       Section.with_observers :section_sweeper do

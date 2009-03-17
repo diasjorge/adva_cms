@@ -74,6 +74,12 @@ class Admin::BaseController < ApplicationController
       I18n.locale.untaint
     end
 
+    def set_content_locale
+      ActiveRecord::Base.locale = params[:cl].blank? ? nil : params[:cl].to_sym
+      yield
+      ActiveRecord::Base.locale = nil
+    end
+
     def set_timezone
       Time.zone = @site.timezone if @site
     end

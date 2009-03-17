@@ -1,0 +1,12 @@
+<% unless section.new_record? %>
+<p>
+  <%= t(:"adva.sections.locales.translated", :locales => section_translation_links(section, :edit)) %>
+</p>
+<% end -%>
+
+<p>
+  <%= label_tag :section_locale, t(:"adva.sections.locale_for_record") %>
+  <select id="section_locale" name="cl">
+    <%= options_for_select I18n.available_locales, Section.locale %>
+  </select>
+</p>

@@ -1,8 +1,10 @@
 class Section < ActiveRecord::Base
   @@types = ['Page']
   cattr_reader :types
-  
+
   serialize :permissions
+
+  translates :title
 
   has_option :contents_per_page, :default => 15
   has_permalink :title, :url_attribute => :permalink, :sync_url => true, :only_when_blank => true, :scope => :site_id

@@ -30,9 +30,9 @@ register_javascript_expansion \
   :login   => %w( ),
   :simple  => %w( ),
   :admin   => %w( adva_cms/effects adva_cms/dragdrop adva_cms/sortable_tree/sortable_tree
-                  adva_cms/admin/smart_form.js adva_cms/admin/spotlight.js 
+                  adva_cms/admin/smart_form.js adva_cms/admin/spotlight.js
                   adva_cms/admin/sortable_tree.js adva_cms/admin/sortable_list.js
-                  adva_cms/admin/admin.js adva_cms/admin/article.js )
+                  adva_cms/admin/admin.js adva_cms/admin/article.js adva_cms/admin/section.js )
 
 register_stylesheet_expansion \
   :default => %w( adva_cms/default adva_cms/common adva_cms/forms ),

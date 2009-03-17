@@ -160,7 +160,7 @@ es:
           success: El site ha sido creado.
           failure: El site no pudo ser creado
         update:
-          success: El site has ser actualizado.
+          success: El site ha sido actualizado.
           failure: El site no pudo ser actualizado
       label:
         name: Nombre del site
@@ -262,7 +262,7 @@ es:
       not_published: not published
     articles:
       locales:
-        translated: "este artículo has these translations: {{locales}}"
+        translated: "este artículo tiene estas traducciones: {{locales}}"
       question_save_as_draft: Guardar como Borrador?
       confirm_save_as_draft: Si, guardar este artículo como borrador
       hints:

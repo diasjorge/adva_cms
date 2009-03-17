@@ -21,6 +21,8 @@
   </ul>
 <% end -%>
 
+<%= render :partial => 'admin/shared/section_locale_select', :locals => { :section => @section } %>
+
 <% form_for :section, @section, :url => admin_section_path(@site, @section), :html => {:method => :put} do |f| %>
   <%= render :partial => 'form', :locals => {:f => f} %>
 

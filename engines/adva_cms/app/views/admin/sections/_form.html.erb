@@ -1,5 +1,5 @@
 <h2><%= t(:'adva.titles.general_settings') %></h2>
-
+<%= hidden_field_tag 'cl', Section.locale %>
 <% f.field_set do %>
   <% column do %>
     <%= f.text_field :title, :label => true %>
