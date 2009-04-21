@@ -1,6 +1,6 @@
 class Activity < ActiveRecord::Base
   belongs_to :site
-  belongs_to :section
+  belongs_to :section, :dependent => :destroy
   belongs_to :object, :polymorphic => true
 
   def method_missing_with_object_attributes(name, *args)
